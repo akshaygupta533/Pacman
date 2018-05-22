@@ -16,15 +16,15 @@ class player:
         self.rect.centerx = self.x
         self.rect.centery = self.y
         if self.dir == 'l':
-            self.image = rot_center(self.image,180)
+            self.image,self.rect = rot_center(self.image,self.rect,180)
         elif self.dir == 'u':
-            self.image = rot_center(self.image,90)
+            self.image,self.rect = rot_center(self.image,self.rect,90)
         elif self.dir == 'd':
-            self.image = rot_center(self.image,-90)
-        gameDisplay.blit(self.image, self.rect)
+            self.image,self.rect = rot_center(self.image,self.rect,-90)
+        screen.blit(self.image, self.rect)
     def drawclosed(self):
         self.image = pygame.image.load(mclosed)
         self.rect = self.image.get_rect()
         self.rect.centerx = self.x
         self.rect.centery = self.y
-        gameDisplay.blit(self.image, self.rect)
+        screen.blit(self.image, self.rect)
