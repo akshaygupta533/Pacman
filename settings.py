@@ -10,3 +10,4 @@ black = (0,0,0)
 screen = pygame.display.set_mode((board_width, board_height))
 mvmt_speed = 2
 pac_size = 25
+line_thickness = 10

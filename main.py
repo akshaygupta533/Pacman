@@ -37,6 +37,18 @@ while True:
 
         if event.type == pygame.QUIT:
             pygame.quit()
+    
+    for hlines in brd.hor:
+        if pacman.x<hlines[1][0]+pac_size/2 and pacman.x>hlines[0][0]-pac_size/2:
+            if pacman.y+y_change<hlines[0][1]+(pac_size+line_thickness)/2 and pacman.y+y_change>hlines[0][1]-(pac_size+line_thickness)/2:
+                y_change=0
+    for vlines in brd.ver:
+        if pacman.y<vlines[1][1]+pac_size/2 and pacman.y>vlines[0][1]-pac_size/2:
+            if pacman.x+x_change<vlines[0][0]+(pac_size+line_thickness)/2 and pacman.x+x_change>vlines[0][0]-(pac_size+line_thickness)/2:
+                x_change=0
+    
+    
+
     pacman.x+=x_change
     pacman.y+=y_change
     if pacman.x > board_width+pac_size:
