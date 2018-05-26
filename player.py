@@ -7,8 +7,8 @@ mclosed = 'closed.png'
 
 class player:
     def __init__(self):
-        self.x = board_height/2
-        self.y = board_height/2
+        self.x = 2*pac_size
+        self.y = 2*pac_size
         self.dir = 'r'
     def drawopen(self):
         self.image = pygame.image.load(mopen)
