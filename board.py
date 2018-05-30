@@ -103,6 +103,21 @@ class board:
         self.hor.append(((pac_size+2*gap+line_thickness/2,board_height-4*pac_size),(0.333*board_width+line_thickness/2,board_height-4*pac_size)))
         self.hor.append(((0.667*board_width-line_thickness/2+1,board_height-4*pac_size),(board_width-3.5*gap,board_height-4*pac_size)))
 
+        self.hor.append(((pac_size+2*gap+line_thickness/2,board_height-4*pac_size-gap),(0.333*board_width+line_thickness/2-gap,board_height-4*pac_size-gap)))
+        self.hor.append(((0.667*board_width-line_thickness/2+1+gap,board_height-4*pac_size-gap),(board_width-3.5*gap,board_height-4*pac_size-gap)))
+
+        self.ver.append(((0.333*board_width+line_thickness/2-2*gap,board_height-7*pac_size+line_thickness/2-1),(0.333*board_width+line_thickness/2-2*gap,board_height-4*pac_size-gap)))
+        self.ver.append(((pac_size+4*gap+line_thickness/2,3*pac_size+gap),(pac_size+4*gap+line_thickness/2,board_height-4*pac_size-gap)))
+        self.ver.append(((pac_size+5*gap+line_thickness/2-2,3*pac_size),(pac_size+5*gap+line_thickness/2-2,board_height-4*pac_size-2*gap)))
+        self.ver.append(((pac_size+6*gap+line_thickness/2-2,3*pac_size),(pac_size+6*gap+line_thickness/2-2,9*pac_size-line_thickness+1)))
+        self.ver.append(((pac_size+7*gap+line_thickness/2-2,3*pac_size+gap),(pac_size+7*gap+line_thickness/2-2,9*pac_size-line_thickness+1+gap)))
+
+        self.ver.append(((board_width-4.5*gap,3*pac_size),(board_width-4.5*gap,board_height-4*pac_size-2*gap)))
+        self.ver.append(((board_width-5.5*gap,3*pac_size+gap),(board_width-5.5*gap,board_height-4*pac_size-gap)))
+        self.ver.append(((board_width-6.5*gap,3*pac_size),(board_width-6.5*gap,9*pac_size-line_thickness+1)))
+        self.ver.append(((board_width-7.5*gap,3*pac_size+gap),(board_width-7.5*gap,9*pac_size-line_thickness+1+gap)))
+        self.ver.append(((0.667*board_width-line_thickness/2+1+2*gap,board_height-7*pac_size+line_thickness/2-1),(0.667*board_width-line_thickness/2+1+2*gap,board_height-4*pac_size-gap)))
+
     def draw(self):
         for vlines in self.ver:
             pygame.draw.line(screen,blue,vlines[0],vlines[1],line_thickness)
