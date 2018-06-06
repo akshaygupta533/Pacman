@@ -11,3 +11,5 @@ screen = pygame.display.set_mode((board_width, board_height))
 mvmt_speed = 2
 pac_size = 25
 line_thickness = 10
+gap = 1.5*pac_size+line_thickness-1
+rad = (int)(pac_size/2)

@@ -7,9 +7,10 @@ mclosed = 'closed.png'
 
 class player:
     def __init__(self):
-        self.x = 2*pac_size
-        self.y = 2*pac_size
+        self.x = board_width/2
+        self.y = board_height-2*pac_size
         self.dir = 'r'
+        self.lives = 3
     def drawopen(self):
         self.image = pygame.image.load(mopen)
         self.rect = self.image.get_rect()
@@ -28,3 +29,8 @@ class player:
         self.rect.centerx = self.x
         self.rect.centery = self.y
         screen.blit(self.image, self.rect)
+    def destroy(self):
+        self.x = board_width/2
+        self.y = board_height-2*pac_size
+        self.lives-=1
+        
