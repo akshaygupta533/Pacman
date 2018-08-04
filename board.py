@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from utilities import *
 
+'''The configurtions for the board'''
 
 class board:
     def __init__(self):

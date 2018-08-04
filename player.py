@@ -5,6 +5,8 @@ import pygame
 mopen = 'open.png'
 mclosed = 'closed.png'
 
+'''The configuratons for the player'''
+
 class player:
     def __init__(self):
         self.x = board_width/2
